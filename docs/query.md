@@ -63,17 +63,17 @@ For DBLP "|" means Boolean "or", and space " " means Boolean "and".
 
 The phrase search operator (.) was disabled due to technical problems, and dblp does not support brackets to indicate the order of precedence rules. For example, to express: 
 
+```
 "Artificial Intelligence" or AI
+```
 
-We had to split the phrase "Artificial Intelligence". This led to the search query: 
+We had to split the phrase ```Artificial Intelligence```. This led to the search query: 
 
-"Artificial| AI Intelligence | AI"
+```Artificial| AI Intelligence | AI``` Instead of `Artificial Intelligence | AI`
 
-Instead of "Artificial Intelligence | AI"
+The wrong query `Artificial Intelligence | AI` will only add papers that contain "Artificial AI" or "Intelligence AI" instead of the desired papers containing "Artificial Intelligence" or "AI".
 
-The wrong query "Artificial Intelligence | AI" will only the noise papers that contain "Artificial AI" or "Intelligence AI" instead of the desired papers containing "Artificial Intelligence" or "AI".
-
-The correct query (Artificial| AI Intelligence | AI) identifies papers that contain "Artificial Intelligence" or "AI", as well as some "noise" papers that contain "Artificial AI" or "Intelligence AI". If the wrong query is used, such as "Artificial Intelligence | AI",
+The correct query `(Artificial| AI Intelligence | AI)` identifies papers that contain "Artificial Intelligence" or "AI", as well as some "noisy" papers that contain "Artificial AI" or "Intelligence AI". If the wrong query is used, such as `Artificial Intelligence | AI`.
 
 Taking the above into account, we defined our DBLP search queries as shown above. To make it easy to read, we used separate lines to represent a space " ".
 
