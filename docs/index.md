@@ -7,15 +7,15 @@ by [Yuanhao Xie], [Luís Cruz], [Petra Heck], [Jan Rellermeyer]
 
 This webpage presents the results of the mapping study submitted to the [1st Workshop on AI Engineering – Software Engineering for AI (WAIN'21)], colocated with [ICSE2021]. A replication package is available at <PLACEHOLDER FOR DOI.ORG>. For more details, check the [preprint at arxiv]().
 
-TODO- What is AI lifecycle
+This mapping study analyzes the publications that look into the lifecycle of artificial intelligence projects from 2009 to May 2020. We use the digital libraries DBLP and SCOPUS to systematically collect these papers. The search terms are provided in the figure below and the exact query can be found [here](query).
 
-TODO- What is the mapping study we did.
+![sd](query.svg)
 
-This mapping study analyzes the publications that look into the lifecycle of artificial intelligence projects from 2009 to May 2020 and maps it into 5 overarching categories:
+In total, we gather 416 publications that we map into 5 overarching categories:
 
 - [Trustworthy](#trustworthy)
-- [Production](#production)
 - [Model Management](#model-management)
+- [Production](#production)
 - [Lifecycle Management](#lifecycle-management)
 - [Data Management](#data-management)
 
@@ -24,16 +24,9 @@ TODO-  Stats: how many papers etc,
 🔗 [The dataset of publications is available as a CSV file](https://github.com/luiscruz/ai-lifecycle-mapping-study/blob/main/docs/_data/publications.csv).
 
 
-## Trustworthy
+## Risk Management
 {% for paper in site.data.publications %}
 {%if paper.Main_Topic == "Trustworthy"%}
-<p markdown='1'> - {{paper.Authors}} ({{paper.Year}}). [{{paper.Title}}](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=%22{{paper.Title}}%22&btnG=). {{paper.venue}}</p>
-{% endif %}
-{% endfor %}
-[🔝back to top]()
-## Production
-{% for paper in site.data.publications %}
-{%if paper.Main_Topic == "Production"%}
 <p markdown='1'> - {{paper.Authors}} ({{paper.Year}}). [{{paper.Title}}](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=%22{{paper.Title}}%22&btnG=). {{paper.venue}}</p>
 {% endif %}
 {% endfor %}
@@ -42,6 +35,14 @@ TODO-  Stats: how many papers etc,
 ## Model Management
 {% for paper in site.data.publications %}
 {%if paper.Main_Topic == "Model Management"%}
+<p markdown='1'> - {{paper.Authors}} ({{paper.Year}}). [{{paper.Title}}](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=%22{{paper.Title}}%22&btnG=). {{paper.venue}}</p>
+{% endif %}
+{% endfor %}
+[🔝back to top]()
+
+## Production
+{% for paper in site.data.publications %}
+{%if paper.Main_Topic == "Production"%}
 <p markdown='1'> - {{paper.Authors}} ({{paper.Year}}). [{{paper.Title}}](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=%22{{paper.Title}}%22&btnG=). {{paper.venue}}</p>
 {% endif %}
 {% endfor %}
